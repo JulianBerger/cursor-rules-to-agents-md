@@ -7,7 +7,7 @@
 
 ### Bun Setup
 
-- Use Bun's built-in features instead of additional packages where possible
+- It should not use any Bun dependencies other than for testing.
 - Leverage Bun's native TypeScript support (no separate build step)
 
 ## Build, Test, and Development Commands
@@ -21,11 +21,13 @@
 
 ## Code Organization
 
+```
 /
 ├── src/
 │ ├── lib/ # Utility functions
 │ └── tests/ # Tests
 └── package.json
+```
 
 ## Implementation Rules
 
@@ -83,9 +85,9 @@ For more complex projects, it's possible to reference other markdown files withi
 
 ## Setup commands
 
-- Install deps: `pnpm install`
-- Start dev server: `pnpm dev`
-- Run tests: `pnpm test`
+- Install deps: `bun install`
+- Start dev server: `bun run dev`
+- Run tests: `bun run test`
 
 ## Blog Posts
 
