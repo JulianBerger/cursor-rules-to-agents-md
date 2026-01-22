@@ -14,6 +14,14 @@ jobs:
       id-token: write # Required for npm publish using OpenID Connect (OIDC)
     steps:
       - uses: actions/checkout@v4
+      - name: Verify package.json version matches tag
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          PKG_VERSION=$(bun -e "import { readFileSync } from 'node:fs'; console.log(JSON.parse(readFileSync('package.json','utf8')).version)")
+          if [ "v${PKG_VERSION}" != "${TAG}" ]; then
+            echo "package.json version ${PKG_VERSION} does not match tag ${TAG}"
+            exit 1
+          fi
       - uses: oven-sh/setup-bun@v1
         with:
           bun-version: latest
