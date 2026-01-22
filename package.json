@@ -1,6 +1,6 @@
 {
   "name": "cursor-rules-to-agents-md",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Convert .cursor/rules into a standardized AGENTS.md file.",
   "type": "module",
   "author": "Julian Berger",
@@ -39,7 +39,7 @@
   ],
   "scripts": {
     "dev": "bun run src/cli.ts",
-    "build": "bun build src/cli.ts --outdir dist --target node",
+    "build": "bun build src/cli.ts --outdir dist --target node --format esm --minify",
     "test": "bun test",
     "lint": "bunx biome lint .",
     "format": "bunx biome format . --write",

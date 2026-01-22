@@ -7,18 +7,28 @@ Convert `.cursor/rules` into a standardized `AGENTS.md` file. The CLI supports i
 Interactive mode (prompts for output mode and write behavior when needed):
 
 ```sh
-bun run src/cli.ts
+npx cursor-rules-to-agents-md
+pnpx cursor-rules-to-agents-md
+bunx cursor-rules-to-agents-md
 ```
 
 Inline mode:
 
+Will embed your rule files inline in the `AGENTS.md` file.
+
 ```sh
+npx cursor-rules-to-agents-md --mode inline
+pnpx cursor-rules-to-agents-md --mode inline
 bunx cursor-rules-to-agents-md --mode inline
 ```
 
 Reference mode:
 
+Will reference your rule files via `@` syntax in the `AGENTS.md` file.
+
 ```sh
+npx cursor-rules-to-agents-md --mode reference
+pnpx cursor-rules-to-agents-md --mode reference
 bunx cursor-rules-to-agents-md --mode reference
 ```
 
@@ -26,12 +36,15 @@ Reference output format:
 
 ```md
 ## Ruleset: TypeScript Rules
+
 **Applies to (globs):**
-* `src/**/*.ts`
-* `tests/**/*.ts`
+
+- `src/**/*.ts`
+- `tests/**/*.ts`
 
 **Includes:**
-* `@src/tests/fixtures/repo-a/.cursor/rules/alpha.md`
+
+- `@src/tests/fixtures/repo-a/.cursor/rules/alpha.md`
 
 ---
 ```
@@ -51,7 +64,3 @@ Custom rules can be added below the insert marker:
 ```md
 <!-- cursor-rules-to-agents-md - INSERT CUSTOM RULES BELOW -->
 ```
-
-## Troubleshooting
-
-- Missing `.cursor` directory: the CLI exits with a colored error and an emoji. Create `.cursor/rules` or point `--cursor-dir` and `--rules-dir` to the correct location.
