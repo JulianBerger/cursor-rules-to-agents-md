@@ -20,6 +20,10 @@ jobs:
       - run: bun install
       - run: bun test
       - run: bun run build
+      # Required for up2date npm version
+      - uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
       - run: npm publish --access public
       - uses: softprops/action-gh-release@v2
         with:
