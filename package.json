@@ -1,6 +1,6 @@
 {
   "name": "cursor-rules-to-agents-md",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert .cursor/rules into a standardized AGENTS.md file.",
   "type": "module",
   "author": "Julian Berger",
