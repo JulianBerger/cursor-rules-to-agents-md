@@ -19,7 +19,7 @@
   "homepage": "https://github.com/julianberger/cursor-rules-to-agents-md#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/julianberger/cursor-rules-to-agents-md.git"
+    "url": "git+https://github.com/julianberger/cursor-rules-to-agents-md.git"
   },
   "bugs": {
     "url": "https://github.com/julianberger/cursor-rules-to-agents-md/issues"
