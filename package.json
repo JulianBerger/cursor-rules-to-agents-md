@@ -16,13 +16,13 @@
     "README.md",
     "LICENSE"
   ],
-  "homepage": "https://github.com/julianberger/cursor-rules-to-agents-md#readme",
+  "homepage": "https://github.com/JulianBerger/cursor-rules-to-agents-md#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/julianberger/cursor-rules-to-agents-md.git"
+    "url": "git+https://github.com/JulianBerger/cursor-rules-to-agents-md.git"
   },
   "bugs": {
-    "url": "https://github.com/julianberger/cursor-rules-to-agents-md/issues"
+    "url": "https://github.com/JulianBerger/cursor-rules-to-agents-md/issues"
   },
   "keywords": [
     "cursor",
